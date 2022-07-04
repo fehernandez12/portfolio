@@ -123,6 +123,7 @@ function App() {
               </a>
             </h1>
             <h2>portfolio 🤓</h2>
+            <p>Here you can find a small showcase of some of the projects I have worked on, or have developed myself. </p>
           </div>
         </header>
         <section className="portfolio-text">
