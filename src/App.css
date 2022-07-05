@@ -23,7 +23,7 @@ body {
   font-weight: 400;
 }
 
-h1 { font-size: 5rem }
+h1 { font-size: 5rem; font-weight: 400; }
 h2 { font-size: 2rem }
 
 img {
