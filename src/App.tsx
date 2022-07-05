@@ -15,8 +15,39 @@ type imageData = {
   siteUri: string
 }
 
+type appString = {
+  en: string,
+  es: string
+}
+
+type appStrings = {
+  title: appString,
+  subtitle: appString,
+  banner: appString
+}
+
+const strings: appStrings = {
+  title: {
+    en: 'portfolio 🤓',
+    es: 'portafolio 🤓'
+  },
+  subtitle: {
+    en: 'Here you can find a small showcase of some of the projects I have worked on, or have developed myself.',
+    es: 'Aquí podrás encontrar una pequeña muestra de los proyectos en los que he participado.'
+  },
+  banner: {
+    en: 'projectsihaveworkedon',
+    es: 'proyectosenlosqueheparticipado'
+  }
+}
 
 function App() {
+  var title: string;
+  var subtitle: string;
+  var banner: string;
+
+
+  var spanish = window.navigator.language === 'es-ES';
   const imagesArray: imageData[] = [
     {
       uri: hk,
@@ -122,13 +153,13 @@ function App() {
                 felipe hernández
               </a>
             </h1>
-            <h2>portfolio 🤓</h2>
-            <p>Here you can find a small showcase of some of the projects I have worked on, or have developed myself. </p>
+            <h2>{spanish ? strings.title.es : strings.title.en}</h2>
+            <p>{spanish ? strings.subtitle.es : strings.subtitle.en}</p>
           </div>
         </header>
         <section className="portfolio-text">
           <div className="wrapper text">
-            projectsihaveworkedon
+            {spanish ? strings.banner.es : strings.banner.en}
           </div>
         </section>
         {imagesArr.map(
@@ -154,7 +185,7 @@ function App() {
         )}
         <section className="portfolio-text">
           <div className="wrapper text">
-            projectsihaveworkedon
+            {spanish ? strings.banner.es : strings.banner.en}
           </div>
         </section>
         <footer className="df aic jcc">
