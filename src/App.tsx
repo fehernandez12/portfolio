@@ -28,8 +28,8 @@ type appStrings = {
 
 const strings: appStrings = {
   title: {
-    en: 'portfolio 🤓',
-    es: 'portafolio 🤓'
+    en: 'portfolio🤓',
+    es: 'portafolio🤓'
   },
   subtitle: {
     en: 'Here you can find a small showcase of some of the projects I have worked on, or have developed myself.',
@@ -150,7 +150,7 @@ function App() {
           <div>
             <h1>
               <a className='unstyled-link' href="https://fehernandez.com/">
-                felipe hernández
+                felipe hernández 👾
               </a>
             </h1>
             <h2>{spanish ? strings.title.es : strings.title.en}</h2>
